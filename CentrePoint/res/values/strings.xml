@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">CentrePoint</string>
+    <string name="title_section_detail">Section Detail</string>
+    <string name="title_section_list">Sections</string>
+
+</resources>
