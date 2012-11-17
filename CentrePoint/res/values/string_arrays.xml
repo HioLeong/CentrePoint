@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="fragment_list">
+        <item name="profile">Profile</item>
+        <item name="events">Events</item>
+        <item name="share">Share</item>
+        <item name="quiz">Quiz</item>
+        <item name="request">Request</item>
+        <item name="story">Share a story</item>
+        <item name="chat">Chat</item>
+    </string-array>
+
+</resources>

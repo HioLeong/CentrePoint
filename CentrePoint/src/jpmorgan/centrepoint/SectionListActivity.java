@@ -2,7 +2,9 @@ package jpmorgan.centrepoint;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.widget.Toast;
 
 public class SectionListActivity extends FragmentActivity implements
 		SectionListFragment.Callbacks {
@@ -19,17 +21,23 @@ public class SectionListActivity extends FragmentActivity implements
 			((SectionListFragment) getSupportFragmentManager()
 					.findFragmentById(R.id.section_list))
 					.setActivateOnItemClick(true);
+
 		}
 	}
 
 	public void onItemSelected(String id) {
+		
+		Fragment f = new QuizFragment();
+		if (id.equals("4")){
+			f = new QuizFragment();
+		} else {
+			f = new QuizFragment();
+		}
+
 		if (mTwoPane) {
-			Bundle arguments = new Bundle();
-			arguments.putString(SectionDetailFragment.ARG_ITEM_ID, id);
-			SectionDetailFragment fragment = new SectionDetailFragment();
-			fragment.setArguments(arguments);
+
 			getSupportFragmentManager().beginTransaction()
-					.replace(R.id.section_detail_container, fragment).commit();
+					.replace(R.id.section_detail_container, f).commit();
 
 		} else {
 			Intent detailIntent = new Intent(this, SectionDetailActivity.class);

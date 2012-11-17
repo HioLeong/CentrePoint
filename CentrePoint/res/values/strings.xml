@@ -1,7 +1,8 @@
 <resources>
 
-    <string name="app_name">CentrePoint</string>
+    <string name="app_name">Centre Point</string>
     <string name="title_section_detail">Section Detail</string>
-    <string name="title_section_list">Sections</string>
+    <string name="title_section_list">Centre Point</string>
+    <string name="place_holder">Place Holder</string>
 
 </resources>

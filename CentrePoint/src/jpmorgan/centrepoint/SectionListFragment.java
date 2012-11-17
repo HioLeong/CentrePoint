@@ -1,6 +1,6 @@
 package jpmorgan.centrepoint;
 
-import jpmorgan.centrepoint.dummy.DummyContent;
+import jpmorgan.centrepoint.dummy.MenuContent;
 import android.R;
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ public class SectionListFragment extends ListFragment {
 
 	private static final String STATE_ACTIVATED_POSITION = "activated_position";
 
-	private Callbacks mCallbacks = sDummyCallbacks;
+	private Callbacks mCallbacks = mMenuCallbacks;
 	private int mActivatedPosition = ListView.INVALID_POSITION;
 
 	public interface Callbacks {
@@ -22,7 +22,7 @@ public class SectionListFragment extends ListFragment {
 
 	}
 
-	private static Callbacks sDummyCallbacks = new Callbacks() {
+	private static Callbacks mMenuCallbacks = new Callbacks() {
 		public void onItemSelected(String id) {
 		}
 	};
@@ -33,9 +33,10 @@ public class SectionListFragment extends ListFragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setListAdapter(new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
+		setListAdapter(new ArrayAdapter<MenuContent.MenuItem>(getActivity(),
 				R.layout.simple_list_item_activated_1, R.id.text1,
-				DummyContent.ITEMS));
+				MenuContent.ITEMS));
+		
 	}
 
 	@Override
@@ -62,14 +63,14 @@ public class SectionListFragment extends ListFragment {
 	@Override
 	public void onDetach() {
 		super.onDetach();
-		mCallbacks = sDummyCallbacks;
+		mCallbacks = mMenuCallbacks;
 	}
 
 	@Override
 	public void onListItemClick(ListView listView, View view, int position,
 			long id) {
 		super.onListItemClick(listView, view, position, id);
-		mCallbacks.onItemSelected(DummyContent.ITEMS.get(position).id);
+		mCallbacks.onItemSelected(MenuContent.ITEMS.get(position).id);
 	}
 
 	@Override
