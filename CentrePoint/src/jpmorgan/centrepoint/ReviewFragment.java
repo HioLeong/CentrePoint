@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 public class ReviewFragment extends Fragment {
 
@@ -29,12 +30,11 @@ public class ReviewFragment extends Fragment {
 		ExpListItems = SetStandardGroups();
 		ExpAdapter = new ExpandListAdapter(getActivity(), ExpListItems);
 		ExpandList.setAdapter(ExpAdapter);
-/*		final Button submit = (Button) view.findViewById(R.id.button);
+		/*final Button submit = 
 		submit.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 			}
-		});
-*/
+		});*/
 		return view;
 	}
 
@@ -47,6 +47,11 @@ public class ReviewFragment extends Fragment {
 		ExpandListChild ch1 = new ExpandListChild();
 		ch1.setName("Title");
 		ch1.setTag(null);
+		ch1.getSubmitButton().setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Toast.
+			}
+		});
 		list2.add(ch1);
 		gru1.setItems(list2);
 

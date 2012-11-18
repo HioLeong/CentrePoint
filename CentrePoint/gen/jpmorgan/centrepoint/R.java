@@ -242,9 +242,9 @@ containing a value of this type.
         public static final int greeting=0x7f040004;
         public static final int large=0x7f040002;
         public static final int list=0x7f040009;
-        public static final int listview_game_answers=0x7f040025;
+        public static final int listview_quiz_answers=0x7f040027;
         public static final int login_button=0x7f040003;
-        public static final int menu_settings=0x7f040029;
+        public static final int menu_settings=0x7f04002c;
         public static final int normal=0x7f040001;
         public static final int picker_subtitle=0x7f040024;
         public static final int points=0x7f040006;
@@ -252,15 +252,18 @@ containing a value of this type.
         public static final int ranking=0x7f040007;
         public static final int review=0x7f04000e;
         public static final int search_box=0x7f040023;
-        public static final int section_detail=0x7f040026;
+        public static final int section_detail=0x7f040029;
         public static final int section_detail_container=0x7f04000a;
         public static final int section_list=0x7f04000b;
         public static final int small=0x7f040000;
         public static final int stars=0x7f04000f;
-        public static final int text_quiz_answer=0x7f040028;
+        public static final int text_quiz_answer=0x7f04002b;
+        public static final int text_quiz_question=0x7f040026;
+        public static final int text_quiz_score=0x7f040028;
         public static final int title=0x7f04000d;
         public static final int tvChild=0x7f04000c;
-        public static final int tvGroup=0x7f040027;
+        public static final int tvGroup=0x7f04002a;
+        public static final int videoview_chat_video=0x7f040025;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -281,17 +284,17 @@ containing a value of this type.
         public static final int com_facebook_picker_title_bar_stub=0x7f03000f;
         public static final int com_facebook_placepickerfragment=0x7f030010;
         public static final int com_facebook_placepickerfragment_list_row=0x7f030011;
-        public static final int fragment_game=0x7f030012;
-        public static final int fragment_section_detail=0x7f030013;
-        public static final int group_row=0x7f030014;
-        public static final int menu_list_container=0x7f030015;
-        public static final int quiz_container=0x7f030016;
+        public static final int fragment_chat=0x7f030012;
+        public static final int fragment_game=0x7f030013;
+        public static final int fragment_section_detail=0x7f030014;
+        public static final int group_row=0x7f030015;
+        public static final int menu_list_container=0x7f030016;
+        public static final int quiz_container=0x7f030017;
     }
     public static final class menu {
         public static final int activity_main=0x7f0a0000;
     }
     public static final class string {
-        public static final int app_id=0x7f050018;
         public static final int app_name=0x7f050011;
         public static final int com_facebook_choose_friends=0x7f05000f;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f050000;
@@ -310,10 +313,9 @@ containing a value of this type.
         public static final int com_facebook_placepicker_subtitle_catetory_only_format=0x7f05000c;
         public static final int com_facebook_placepicker_subtitle_format=0x7f05000b;
         public static final int com_facebook_placepicker_subtitle_were_here_only_format=0x7f05000d;
-        public static final int hello_world=0x7f050015;
         public static final int menu_settings=0x7f050016;
         public static final int place_holder=0x7f050014;
-        public static final int title_activity_main=0x7f050017;
+        public static final int score=0x7f050015;
         public static final int title_section_detail=0x7f050012;
         public static final int title_section_list=0x7f050013;
     }

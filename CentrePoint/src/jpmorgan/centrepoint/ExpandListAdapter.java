@@ -2,6 +2,7 @@ package jpmorgan.centrepoint;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,6 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
 	
     private Context context;
     private ArrayList<ExpandListGroup> groups;
-    private Button submit;
     public ExpandListAdapter(Context context, ArrayList<ExpandListGroup> groups) {
         this.context = context;
         this.groups = groups;
@@ -41,21 +41,20 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
         // TODO Auto-generated method stub
         return childPosition;
     }
+    
+    
  
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View view,
             ViewGroup parent) {
         ExpandListChild child = (ExpandListChild) getChild(groupPosition, childPosition);
+        Button submit = (Button) view.findViewById(R.id.button);
         if (view == null) {
             LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             view = infalInflater.inflate(R.layout.child_row, null);
         }
         return view;
     }
-    
-    public Button getSubmit(int groupPosition)
-    {
-    	return submit;
-    }
+   
  
     public int getChildrenCount(int groupPosition) {
         // TODO Auto-generated method stub
@@ -82,6 +81,7 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
  
     public View getGroupView(int groupPosition, boolean isLastChild, View view,
             ViewGroup parent) {
+    	
         ExpandListGroup group = (ExpandListGroup) getGroup(groupPosition);
         if (view == null) {
             LayoutInflater inf = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
@@ -92,6 +92,7 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
         // TODO Auto-generated method stub
         return view;
     }
+    
  
     public boolean hasStableIds() {
         // TODO Auto-generated method stub
