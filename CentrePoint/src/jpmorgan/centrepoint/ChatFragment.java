@@ -24,12 +24,15 @@ public class ChatFragment extends Fragment {
 
 		VideoView video = (VideoView) view
 				.findViewById(R.id.videoview_chat_video);
-		video.setVideoURI(Uri
-				.parse("rtsp://v1.cache2.c.youtube.com/CjYLENy73wIaLQmJTUoPKLO2nBMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYOCTxaDAqoTSUAw=/0/0/0/video.3gp"));
-		video.setMediaController(new MediaController(getActivity()));
-		video.requestFocus();
-		video.start();
 
+		try {
+			video.setVideoURI(Uri.parse(""));
+			video.setMediaController(new MediaController(getActivity()));
+			video.requestFocus();
+			video.start();
+		} catch (Exception e) {
+
+		}
 		return view;
 	}
 
