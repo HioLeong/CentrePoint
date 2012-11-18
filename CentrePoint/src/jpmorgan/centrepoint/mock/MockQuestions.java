@@ -45,6 +45,10 @@ public class MockQuestions {
 				getAnswer("Britannia Hotels", true),
 				getAnswer("Supported Flats", false), getAnswer("Foyers", false)));
 		questions.add(q4);
+		
+		Question q5 = new Question();
+		q5.setQuestion("How long can a young person stay in a service?"); 
+		questions.add(q5);
 	}
 
 	private Answer getAnswer(String answerString, boolean correctAnswer) {
