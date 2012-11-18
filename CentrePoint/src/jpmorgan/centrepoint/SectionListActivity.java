@@ -31,10 +31,11 @@ public class SectionListActivity extends FragmentActivity implements
 			f = new QuizFragment();
 		} else if (id.equals("7")) {
 			f = new ChatFragment();
+		} else if (id.equals("6")) {
+			f = new ReviewFragment();
 		} else {
 			f = new SectionDetailFragment();
 		}
-
 		if (mTwoPane) {
 
 			getSupportFragmentManager().beginTransaction()
