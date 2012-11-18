@@ -65,7 +65,7 @@ public class QuizFragment extends Fragment {
 		} catch (IndexOutOfBoundsException e) {
 			answers.clear();
 			adapter.notifyDataSetChanged();
-			setQuestionLabel("Final score: " + Integer.toString(currentPoints));
+			setQuestionLabel("Final CentrePoints: " + Integer.toString(currentPoints));
 		}
 	}
 

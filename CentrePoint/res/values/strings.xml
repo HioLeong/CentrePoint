@@ -4,6 +4,6 @@
     <string name="title_section_detail">Section Detail</string>
     <string name="title_section_list">Centre Point</string>
     <string name="place_holder">Place Holder</string>
-    <string name="score">Score: %d</string>
+    <string name="score">CentrePoints: %d</string>
 
 </resources>
