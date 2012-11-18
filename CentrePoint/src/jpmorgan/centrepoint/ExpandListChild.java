@@ -18,9 +18,5 @@ public class ExpandListChild {
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
-    public Button getSubmitButton()
-    {
-    	return submit;
-    }
 }
 

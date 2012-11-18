@@ -220,7 +220,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int Review=0x7f040008;
-        public static final int button=0x7f040010;
+        public static final int button=0x7f04000a;
         public static final int com_facebook_loginfragment_login_button=0x7f040015;
         public static final int com_facebook_loginfragment_logo_image=0x7f040013;
         public static final int com_facebook_loginfragment_profile_name=0x7f040014;
@@ -250,18 +250,18 @@ containing a value of this type.
         public static final int points=0x7f040006;
         public static final int profilePicture=0x7f040005;
         public static final int ranking=0x7f040007;
-        public static final int review=0x7f04000e;
+        public static final int review=0x7f04000f;
         public static final int search_box=0x7f040023;
         public static final int section_detail=0x7f040029;
-        public static final int section_detail_container=0x7f04000a;
-        public static final int section_list=0x7f04000b;
+        public static final int section_detail_container=0x7f04000b;
+        public static final int section_list=0x7f04000c;
         public static final int small=0x7f040000;
-        public static final int stars=0x7f04000f;
+        public static final int stars=0x7f040010;
         public static final int text_quiz_answer=0x7f04002b;
         public static final int text_quiz_question=0x7f040026;
         public static final int text_quiz_score=0x7f040028;
-        public static final int title=0x7f04000d;
-        public static final int tvChild=0x7f04000c;
+        public static final int title=0x7f04000e;
+        public static final int tvChild=0x7f04000d;
         public static final int tvGroup=0x7f04002a;
         public static final int videoview_chat_video=0x7f040025;
     }

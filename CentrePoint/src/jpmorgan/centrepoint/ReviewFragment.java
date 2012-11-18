@@ -30,11 +30,6 @@ public class ReviewFragment extends Fragment {
 		ExpListItems = SetStandardGroups();
 		ExpAdapter = new ExpandListAdapter(getActivity(), ExpListItems);
 		ExpandList.setAdapter(ExpAdapter);
-		/*final Button submit = 
-		submit.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-			}
-		});*/
 		return view;
 	}
 
@@ -47,11 +42,6 @@ public class ReviewFragment extends Fragment {
 		ExpandListChild ch1 = new ExpandListChild();
 		ch1.setName("Title");
 		ch1.setTag(null);
-		ch1.getSubmitButton().setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				Toast.
-			}
-		});
 		list2.add(ch1);
 		gru1.setItems(list2);
 
@@ -62,6 +52,7 @@ public class ReviewFragment extends Fragment {
 		ExpandListChild ch2 = new ExpandListChild();
 		ch2.setName("Title");
 		ch2.setTag(null);
+		
 		list2.add(ch2);
 		gru2.setItems(list2);
 

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.Parse;
  
@@ -47,12 +48,13 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View view,
             ViewGroup parent) {
         ExpandListChild child = (ExpandListChild) getChild(groupPosition, childPosition);
-        Button submit = (Button) view.findViewById(R.id.button);
-        if (view == null) {
+        if (view == null) 
+        {
             LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             view = infalInflater.inflate(R.layout.child_row, null);
         }
         return view;
+        
     }
    
  
