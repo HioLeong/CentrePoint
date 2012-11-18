@@ -16,7 +16,6 @@
 
 package jpmorgan.centrepoint;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +34,6 @@ import com.facebook.GraphObject;
 import com.facebook.GraphUser;
 import com.facebook.LoginButton;
 import com.facebook.ProfilePictureView;
-import com.facebook.Session;
 import com.parse.GetCallback;
 import com.parse.Parse;
 import com.parse.ParseObject;
@@ -103,8 +101,8 @@ public class MainActivity extends FacebookActivity {
         updateUI();
 
         IntentFilter filter = new IntentFilter();
-        filter.addAction(Session.ACTION_ACTIVE_SESSION_OPENED);
-        filter.addAction(Session.ACTION_ACTIVE_SESSION_CLOSED);
+        filter.addAction(com.facebook.Session.ACTION_ACTIVE_SESSION_OPENED);
+        filter.addAction(com.facebook.Session.ACTION_ACTIVE_SESSION_CLOSED);
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver, filter);
     }
 
@@ -131,8 +129,8 @@ public class MainActivity extends FacebookActivity {
     }
 
     private void updateUI() {
-        boolean enableButtons = Session.getActiveSession() != null &&
-                Session.getActiveSession().getState().isOpened();
+        boolean enableButtons = com.facebook.Session.getActiveSession() != null &&
+                com.facebook.Session.getActiveSession().getState().isOpened();
 
         if (enableButtons && user != null) {
             profilePictureView.setUserId(user.getId());
