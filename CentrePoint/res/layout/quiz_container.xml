@@ -8,8 +8,8 @@
         android:id="@+id/text_quiz_answer"
         android:layout_width="fill_parent"
         android:layout_height="36dp"
-        android:gravity="center" 
-        android:text="@string/place_holder">
+        android:gravity="center"
+        android:text="@string/place_holder" >
     </TextView>
 
 </LinearLayout>

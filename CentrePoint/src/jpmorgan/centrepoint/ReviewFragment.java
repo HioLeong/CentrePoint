@@ -2,33 +2,40 @@ package jpmorgan.centrepoint;
 
 import java.util.ArrayList;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ExpandableListView;
 
-public class Review extends Activity {
-	/** Called when the activity is first created. */
+public class ReviewFragment extends Fragment {
+
 	private ExpandListAdapter ExpAdapter;
 	private ArrayList<ExpandListGroup> ExpListItems;
 	private ExpandableListView ExpandList;
 
-	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_review);
-		ExpandList = (ExpandableListView) findViewById(R.id.list);
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View view = inflater
+				.inflate(R.layout.activity_review, container, false);
+		ExpandList = (ExpandableListView) view.findViewById(R.id.list);
 		ExpListItems = SetStandardGroups();
-		ExpAdapter = new ExpandListAdapter(Review.this, ExpListItems);
+		ExpAdapter = new ExpandListAdapter(getActivity(), ExpListItems);
 		ExpandList.setAdapter(ExpAdapter);
-		final Button submit = (Button) findViewById(R.id.button);
+/*		final Button submit = (Button) view.findViewById(R.id.button);
 		submit.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				// /_________\\\
 			}
 		});
-
+*/
+		return view;
 	}
 
 	public ArrayList<ExpandListGroup> SetStandardGroups() {
@@ -79,4 +86,5 @@ public class Review extends Activity {
 		list.add(gru4);
 		return list;
 	}
+
 }
