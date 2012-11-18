@@ -1,4 +1,4 @@
-package jpmorgan.centrepoint.dummy;
+package jpmorgan.centrepoint;
 
 import java.util.ArrayList;
 import java.util.HashMap;
